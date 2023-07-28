@@ -1,0 +1,17 @@
+FUNCTION is_plaindrome(word:STRING;n,i:INTEGER;palaindrome:BOOLEAN) : BOOLEAN
+VAR
+    
+BEGIN
+
+    IF (i<n-1 and word[i]==word[n-1]) THEN
+        palaindrome:=is_plaindrome(word,n-1,i+1);
+    ELSE_IF (n-1==i) THEN
+        palaindrome:=true;
+
+        RETURN palaindrome
+    ELSE
+        palaindrome:=true;
+        RETURN palaindrome
+    END_IF
+    
+END
